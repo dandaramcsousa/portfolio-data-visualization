@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>First Post</title>
+      <title>Açude de Boqueirão</title>
       <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/first-post/</link>
       <pubDate>Tue, 14 Nov 2017 09:25:04 -0300</pubDate>
       
       <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/first-post/</guid>
-      <description>const spec = { &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v2.json&#34;, &#34;data&#34;: { &#34;url&#34;: &#34;https://api.insa.gov.br/reservatorios/12172/monitoramento&#34;, &#34;format&#34;: { &#34;type&#34;: &#34;json&#34;, &#34;property&#34;: &#34;volumes&#34;, &#34;parse&#34;: { &#34;DataInformacao&#34;: &#34;utc:&#39;%d/%m/%Y&#39;&#34; } } }, &#34;width&#34;: 500, &#34;height&#34;: 120, &#34;mark&#34;: { &#34;type&#34;: &#34;area&#34;, &#34;interpolate&#34;: &#34;monotone&#34; }, &#34;selection&#34;: { &#34;brush&#34;: {&#34;type&#34;: &#34;interval&#34;, &#34;encodings&#34;: [&#34;x&#34;]} }, &#34;encoding&#34;: { &#34;x&#34;: { &#34;timeUnit&#34; : &#34;monthyear&#34;, &#34;field&#34;: &#34;DataInformacao&#34;, &#34;type&#34;: &#34;temporal&#34;, &#34;axis&#34;: {&#34;format&#34;: &#34;%Y&#34;, &#34;title&#34; : &#34;Volume percentual ao longo dos anos&#34;} }, &#34;</description>
+      <description>O Açude Epitácio Pessoa, o Boqueirão, é uma represa localizada na cidade de Boqueirão que abastece diversas cidades no estado da Paraíba. O açude chamou atenção além das cidades abastecidas quando, com a seca, ele atingiu volumes extemos e que levaram à um racionamento que se estendeu de dezembro de 2014 até julho de 2017 junto com a chegada das águas da transposição do Rio São Francisco.
+  O Boqueirão em si teve muitos altos e baixos devido à secas e má gestão.</description>
     </item>
     
     <item>
