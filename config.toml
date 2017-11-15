@@ -7,10 +7,10 @@ publishDir = "docs"
 [params]
   bloghead        = "Blog"                        # Full name shows on blog post pages
   firstname       = "Dandara"                # First name shows in introduction on main page
-  tagline         = "Este é um portfólio de visualizações"       # Appears after the introduction
+  tagline         = "This a information visualization portfolio"       # Appears after the introduction
   introheight     = "large"                       # Input either 'medium' or 'large' or 'fullheight'
   theme           = "light"                        # Choose 'light' or 'dark'
-  avatar          = "img/profile.jpg"             # Path to image in static folder eg. img/avatar.png, or comment out to remove
+  avatar          = "img/profile.jpeg"             # Path to image in static folder eg. img/avatar.png, or comment out to remove
   email           = "dandara.sousa@ccc.ufcg.edu.br"         # Shows in contact section, or leave blank to omit
   localtime       = true                          # Show your current local time in contact section
   timezone        = "America/Bahia"         # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
