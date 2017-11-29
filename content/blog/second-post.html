@@ -87,7 +87,11 @@
 
       grafico.append("text")
         .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
-        .text("Frequencia");
+        .text("Dez-Percentil");
+
+      grafico.append("text")
+        .attr("transform", "translate(" +(larguraVis + margin.top)/2 + "," + (alturaVis + margin.bottom)  + ")")
+        .text("Noventa-Percentil");
 
     }
 
