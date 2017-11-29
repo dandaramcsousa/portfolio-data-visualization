@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Açude Velho</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h2>Dados do Açude Velho</h2>
+    </div>
+    <div class="row mychart" id="chart">
+    </div>
+  </div>
+
+  <style>
+      .mychart rect {
+        fill: rgb(167, 94, 34);
+      }
+
+      .mychart rect:hover {
+        fill: rgb(194, 72, 123);
+      }
+
+      .mychart text {
+        font: 12px sans-serif;
+        text-anchor: left;
+        color: black;
+      }
+    </style>
+
+  <script type="text/javascript">
+    "use strict"
+
+    function desenhaBarras(dados) {
+      
+      var alturaSVG = 400, larguraSVG = 900;
+      var	margin = {top: 10, right: 20, bottom:30, left: 45}, 
+          larguraVis = larguraSVG - margin.left - margin.right,
+          alturaVis = alturaSVG - margin.top - margin.bottom;
+
+     var grafico = d3.select('#chart') 
+        .append('svg')
+          .attr('width', larguraVis + margin.left + margin.right)
+          .attr('height', alturaVis + margin.top + margin.bottom)
+        .append('g')
+          .attr('transform', 'translate(' +  margin.left + ',' + margin.top + ')');
+
+      var x = d3.scaleLinear()
+                .domain([88,103])
+                .rangeRound([0,larguraVis]);
+
+      var y = d3.scaleLinear()
+                .domain([0, 28])
+                .rangeRound([alturaVis, 0]);
+
+      
+
+
+       grafico.selectAll('g')
+              .data(dados)
+              .enter()
+                .append('circle')
+                  .attr('cx', d => x(d.noventa_percentil))   
+                  .attr('r',d => 5) 
+                  .attr('cy', d => y(d.dez_percentil))
+                  .attr('fill', d => chovendo(d));
+
+
+      
+
+      grafico.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + alturaVis + ")")
+              .call(d3.axisBottom(x)); 
+
+      grafico.append('g')
+              .attr('transform', 'translate(0,0)')
+              .call(d3.axisLeft(y))  
+
+      grafico.append("text")
+        .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
+        .text("Frequencia");
+
+    }
+
+    function chovendo(dados) {
+      if(dados.mes < 5){
+        return "MIDNIGHTBLUE";
+      }
+      else{
+        return "YELLOW";
+      }
+      
+
+    };
+    
+
+    d3.json('dados/boqueirao-por-mes.json', function(dados) {
+      desenhaBarras(dados);
+    });
+
+  </script>
+</body>
+
+</html>
