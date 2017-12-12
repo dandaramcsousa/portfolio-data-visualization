@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Visualização da Informação</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Nov 2017 09:25:04 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 27 Nov 2017 09:25:04 -0300</lastBuildDate>
     
 	<atom:link href="https://dandaramcsousa.github.io/portoflio-data-visualization/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Histórias de pessoas que passaram no Açude Velho ao longo do dia</title>
+      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</link>
+      <pubDate>Mon, 27 Nov 2017 09:25:04 -0300</pubDate>
+      
+      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</guid>
+      <description>Açude VelhoDados do Açude Velho.mychart rect {fill: rgb(167, 94, 34);}.mychart rect:hover {fill: rgb(194, 72, 123);}.mychart text {font: 12px sans-serif;text-anchor: left;color: black;}&#34;use strict&#34;function desenhaBarras(dados) {// Preencha aqui.var alturaSVG = 400, larguraSVG = 900;var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do graficolarguraVis = larguraSVG - margin.</description>
+    </item>
     
     <item>
       <title>Açude de Boqueirão</title>
@@ -18,15 +27,6 @@
       
       <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/first-post/</guid>
       <description>O Açude Epitácio Pessoa, o Boqueirão, é uma represa localizada na cidade de Boqueirão que abastece diversas cidades no estado da Paraíba. O açude chamou atenção afora das cidades abastecidas quando, com a seca, ele atingiu volumes extremos e que levaram à um racionamento que se estendeu de dezembro de 2014 até julho de 2017. Utilizando dados da Agência Nacional de Águas, a ANA, podemos entender um pouco do histórico do açude.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</guid>
-      <description>Açude VelhoDados do Açude Velho.mychart rect {fill: rgb(167, 94, 34);}.mychart rect:hover {fill: rgb(194, 72, 123);}.mychart text {font: 12px sans-serif;text-anchor: left;color: black;}&#34;use strict&#34;function desenhaBarras(dados) {// Preencha aqui.var alturaSVG = 400, larguraSVG = 900;var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do graficolarguraVis = larguraSVG - margin.</description>
     </item>
     
   </channel>

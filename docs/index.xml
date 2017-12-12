@@ -6,10 +6,19 @@
     <description>Recent content on Visualização da Informação</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Nov 2017 09:25:04 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 27 Nov 2017 09:25:04 -0300</lastBuildDate>
     
 	<atom:link href="https://dandaramcsousa.github.io/portoflio-data-visualization/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Histórias de pessoas que passaram no Açude Velho ao longo do dia</title>
+      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</link>
+      <pubDate>Mon, 27 Nov 2017 09:25:04 -0300</pubDate>
+      
+      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</guid>
+      <description>Açude VelhoDados do Açude Velho.mychart rect {fill: rgb(167, 94, 34);}.mychart rect:hover {fill: rgb(194, 72, 123);}.mychart text {font: 12px sans-serif;text-anchor: left;color: black;}&#34;use strict&#34;function desenhaBarras(dados) {// Preencha aqui.var alturaSVG = 400, larguraSVG = 900;var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do graficolarguraVis = larguraSVG - margin.</description>
+    </item>
     
     <item>
       <title>Açude de Boqueirão</title>
@@ -36,15 +45,6 @@
       
       <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/about/</guid>
       <description> Basics Information  Born in 1997 Living in Campina Grande, PB Computer Science student at Federal University of Campina Grande Researcher at Analytics Lab Like to play with data Like to analyze how are women in STEAM  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</guid>
-      <description>Açude VelhoDados do Açude Velho.mychart rect {fill: rgb(167, 94, 34);}.mychart rect:hover {fill: rgb(194, 72, 123);}.mychart text {font: 12px sans-serif;text-anchor: left;color: black;}&#34;use strict&#34;function desenhaBarras(dados) {// Preencha aqui.var alturaSVG = 400, larguraSVG = 900;var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do graficolarguraVis = larguraSVG - margin.</description>
     </item>
     
   </channel>

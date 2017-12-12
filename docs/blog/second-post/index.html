@@ -1,4 +1,150 @@
 <!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Visualização da Informação">
+
+<base href="https://dandaramcsousa.github.io/portoflio-data-visualization/">
+<title>
+
+
+     Histórias de pessoas que passaram no Açude Velho ao longo do dia 
+
+</title>
+<link rel="canonical" href="https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+
+
+    
+    <link rel="stylesheet" href="https://dandaramcsousa.github.io/portoflio-data-visualization/css/light-style.css?t=1512877646">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://dandaramcsousa.github.io/portoflio-data-visualization/img/fav.ico"
+
+>
+
+
+
+
+
+
+
+</head>
+
+<body>
+  
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="/#about">About</a> 
+      </span>
+      <span class="nav-item">
+        <a href="/blog">Back to blog</a>
+      </span> 
+      <span class="nav-item">
+        <a href="/#contact">Contact</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="https://dandaramcsousa.github.io/portoflio-data-visualization/index.xml"><i class="fa fa-rss"></i></a>
+      </span>
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/">Histórias de pessoas que passaram no Açude Velho ao longo do dia</a></h2>
+            <div class="post-data">
+                Nov 27, 2017 |
+                2 minutes read
+            </div>
+
+            
+                <div class="blog-share">
+                Share this:
+                
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Hist%c3%b3rias%20de%20pessoas%20que%20passaram%20no%20A%c3%a7ude%20Velho%20ao%20longo%20do%20dia%20https%3a%2f%2fdandaramcsousa.github.io%2fportoflio-data-visualization%2fblog%2fsecond-post%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+                </a>
+                
+                 
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdandaramcsousa.github.io%2fportoflio-data-visualization%2fblog%2fsecond-post%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+                </a>
+                
+                
+                
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fdandaramcsousa.github.io%2fportoflio-data-visualization%2fblog%2fsecond-post%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+                </a>
+                
+                </div>
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -37,13 +183,13 @@
     "use strict"
 
     function desenhaBarras(dados) {
-      
+      // Preencha aqui.
       var alturaSVG = 400, larguraSVG = 900;
-      var	margin = {top: 10, right: 20, bottom:30, left: 45}, 
+      var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do grafico
           larguraVis = larguraSVG - margin.left - margin.right,
           alturaVis = alturaSVG - margin.top - margin.bottom;
 
-     var grafico = d3.select('#chart') 
+     var grafico = d3.select('#chart') // cria elemento <svg> com um <g> dentro
         .append('svg')
           .attr('width', larguraVis + margin.left + margin.right)
           .attr('height', alturaVis + margin.top + margin.bottom)
@@ -58,33 +204,40 @@
                 .domain([0, 28])
                 .rangeRound([alturaVis, 0]);
 
-      
-
+      /*
+       * As marcas
+       1. Pontos com a posição horizontal sendo o 90-percentil e a vertical 10-percentil, e a cor do ponto dizendo se é mês de período chuvoso ou não.
+       */
 
        grafico.selectAll('g')
               .data(dados)
               .enter()
                 .append('circle')
-                  .attr('cx', d => x(d.noventa_percentil))   
-                  .attr('r',d => 5) 
+                  .attr('cx', d => x(d.noventa_percentil))   // usando a escala definida acima
+                  .attr('r',d => 5) // largura da barra via escala
                   .attr('cy', d => y(d.dez_percentil))
                   .attr('fill', d => chovendo(d));
 
 
-      
-
+      /*
+       * Os eixos
+       */
       grafico.append("g")
               .attr("class", "x axis")
               .attr("transform", "translate(0," + alturaVis + ")")
-              .call(d3.axisBottom(x)); 
+              .call(d3.axisBottom(x)); // magica do d3: gera eixo a partir da escala
 
       grafico.append('g')
               .attr('transform', 'translate(0,0)')
-              .call(d3.axisLeft(y))  
+              .call(d3.axisLeft(y))  // gera eixo a partir da escala
 
       grafico.append("text")
         .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
         .text("Dez-Percentil");
+
+      grafico.append("text")
+        .attr("transform", "translate(" +(larguraVis + margin.top)/2 + "," + (alturaVis + margin.bottom)  + ")")
+        .text("Noventa-Percentil");
 
     }
 
@@ -108,3 +261,40 @@
 </body>
 
 </html>
+
+    </div>
+
+    <div class="disqus">
+        
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text"><a href="https://github.com/hivickylai/hugo-theme-introduction" target="_blank" rel="noopener">Introduction</a> theme for <a href="http://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. Made with <i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i>. <a href="https://vickylai.io" target="_blank" rel="noopener">Vicky Lai</a> 2017</span>
+        
+    </div>
+</div>
+
+</div>
+</div>
+
+
+<script>
+$('a[href^="https:\/\/dandaramcsousa.github.io\/portoflio-data-visualization\/blog\/second-post\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>
+
+</body>
