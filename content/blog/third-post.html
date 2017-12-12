@@ -1,0 +1,188 @@
+---
+title: "Histórias de pessoas que passaram no Açude Velho"
+date: 2017-12-09T09:25:04-03:00
+draft: false
+---
+
+Um dos pontos mais atrativos da cidade de Campina Grande é, sem dúvidas, o Açude Velho. Um ambiente histórico e atemporal quase no centro de uma cidade do interior da Paraíba o Açude Velho tem todos os dias vários cidadãos passando ao seu redor. Sejam pedestres, ciclistas ou motoristas, o volume de pessoas é alto.
+Em um dia de coleta o LabRua obteve números para os que passam pelo Açude e, também, categorizou os indivíduos por gênero e horário. E com esses dados do LabRua vamos hoje tentar conhecer um pouco sobre o cotidiano desse cartão-postal.
+Primeiro, vamos conhecer como os dados se comportam. O gráfico abaixo mostra a soma da quantidade de pessoas contabilizadas em todos os pontos de coleta do LabRua. É possível diferenciar o gênero e ter uma noção de quantos homens e quantas mulheres estão no Açude durante o dia.
+
+1. Observar a quantidade de homens e mulheres em diferentes faixas de horários.
+4. Encontrar a faixa de horário e o horário no qual há um maior fluxo de pessoas.
+[gráfico 1]
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+form {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+label {
+  display: block;
+}
+
+</style>
+<form>
+  <label><input type="radio" name="mode" value="grouped"> Grouped</label>
+  <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
+</form>
+<svg width="960" height="500"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var n = 2, // The number of series.
+    m = 60; // The number of values per series.
+    nm = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+// The xz array has m elements, representing the x-values shared by all series.
+// The yz array has n elements, representing the y-values of each of the n series.
+// Each yz[i] is an array of m non-negative numbers representing a y-value for xz[i].
+// The y01z array has the same structure as yz, but with stacked [y₀, y₁] instead of y.
+var xz = nm,
+    yz = d3.range(n).map(function() { return bumps(m); }), //mapear para o primeiro e para o segundo range
+    y01z = d3.stack().keys(d3.range(n))(d3.transpose(yz)),
+    yMax = d3.max(yz, function(y) { return d3.max(y); }),
+    y1Max = d3.max(y01z, function(y) { return d3.max(y, function(d) { return d[1]; }); });
+
+var svg = d3.select("svg"),
+    margin = {top: 40, right: 10, bottom: 20, left: 10},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var x = d3.scaleBand()
+    .domain(nm)
+    .rangeRound([0, width])
+    .padding(0.08);
+
+var y = d3.scaleLinear()
+    .domain([0, y1Max])
+    .range([height, 0]);
+
+var color = d3.scaleOrdinal()
+    .domain(d3.range(n))
+    .range(d3.schemeCategory20c);
+
+var series = g.selectAll(".series")
+  .data(y01z)
+  .enter().append("g")
+    .attr("fill", function(d, i) { return color(i); });
+
+var rect = series.selectAll("rect")
+  .data(function(d) { return d; })
+  .enter().append("rect")
+    .attr("x", function(d, i) { return x(i); })
+    .attr("y", height)
+    .attr("width", x.bandwidth())
+    .attr("height", 0);
+
+rect.transition()
+    .delay(function(d, i) { return i * 10; })
+    .attr("y", function(d) { return y(d[1]); })
+    .attr("height", function(d) { return y(d[0]) - y(d[1]); });
+
+g.append("g")
+    .attr("class", "axis axis--x")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x)
+        .tickSize(0)
+        .tickPadding(6));
+
+d3.selectAll("input")
+    .on("change", changed);
+
+var timeout = d3.timeout(function() {
+  d3.select("input[value=\"grouped\"]")
+      .property("checked", true)
+      .dispatch("change");
+}, 2000);
+
+function changed() {
+  timeout.stop();
+  if (this.value === "grouped") transitionGrouped();
+  else transitionStacked();
+}
+
+function transitionGrouped() {
+  y.domain([0, yMax]);
+
+  rect.transition()
+      .duration(500)
+      .delay(function(d, i) { return i * 10; })
+      .attr("x", function(d, i) { return x(i) + x.bandwidth() / n * this.parentNode.__data__.key; })
+      .attr("width", x.bandwidth() / n)
+    .transition()
+      .attr("y", function(d) { return y(d[1] - d[0]); })
+      .attr("height", function(d) { return y(0) - y(d[1] - d[0]); });
+}
+
+function transitionStacked() {
+  y.domain([0, y1Max]);
+
+  rect.transition()
+      .duration(500)
+      .delay(function(d, i) { return i * 10; })
+      .attr("y", function(d) { return y(d[1]); })
+      .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+    .transition()
+      .attr("x", function(d, i) { return x(i); })
+      .attr("width", x.bandwidth());
+}
+
+// Returns an array of m psuedorandom, smoothly-varying non-negative numbers.
+// Inspired by Lee Byron’s test data generator.
+// http://leebyron.com/streamgraph/
+function bumps(m) {
+  var values = [], i, j, w, x, y, z;
+
+  // Initialize with uniform random values in [0.1, 0.2).
+  for (i = 0; i < m; ++i) {
+    values[i] = 0.1 + 0.1 * Math.random();
+  }
+
+  // Add five random bumps.
+  for (j = 0; j < 5; ++j) {
+    x = 1 / (0.1 + Math.random());
+    y = 2 * Math.random() - 0.5;
+    z = 10 / (0.1 + Math.random());
+    for (i = 0; i < m; i++) {
+      w = (i / m - y) * z;
+      values[i] += x * Math.exp(-w * w);
+    }
+  }
+
+  // Ensure all values are positive.
+  for (i = 0; i < m; ++i) {
+    values[i] = Math.max(0, values[i]);
+  }
+
+  return values;
+}
+
+</script>
+
+O que vemos nesse gráfico é uma amostra da nossa sociedade em espaço público: homens predominam. A primeira reflexão que deixo aqui é: **Por que a proporção não é 50/50? As mulheres não se sentem a vontade num espaço como o Açude Velho?** De forma menos militante mas ainda exploratória é possível perceber os horários de pico e que coincidem com os horários em que as pessoas estão foram do trabalho. Podemos então supor que os frequentadores da região são pessoas que tem o Açude como caminho para o trabalho ou que passam por lá para alguma atividade externa.
+
+Porém alguém pode até questionar que o gráfico acima mostra uma quantidade muito grande, as pessoas podem terem sidos contabilizadas mais de uma vez. Sim, é válido. Então vamos nos especificar mais nos dados.
+
+2. Comparar o número de mulheres que passam, em média, em cada ponto.
+[Gráfico 2]
+
+Pensando então na contagem de pessoas em cada ponto, ainda assim é fácil perceber a discrepância entre gêneros. Os homens se sentem mais à vontade em estar num espaço aberto? Ou seriam eles já detentores da liberdade? Talvez até as mulheres prefiram outros espaços como o Parque da Criança. Os dados por si só não são detentores de uma verdade universal e neste caso está apenas nos guiando numa reflexão.
+
+Puxando um pouco para o lado da presença das mulheres, observamos que o ponto de contagem nos Burrinhos obteve o maior número de mulheres passantes. Mais uma vez vamos nos aprofundar nos dados...
+
+3. Identificar em qual horário há mais mulheres no ponto dos Burrinhos.
+[gráfico 3]
+
+As mulheres nessa região específica costuma agir como o todo do Açude Velho, ir durante os horários fora de trabalho.
+
+
+https://bl.ocks.org/mbostock/4063423
+https://bl.ocks.org/kerryrodden/7090426

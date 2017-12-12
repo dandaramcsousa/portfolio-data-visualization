@@ -6,10 +6,19 @@
     <description>Recent content in Blogs on Visualização da Informação</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Nov 2017 09:25:04 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 09 Dec 2017 09:25:04 -0300</lastBuildDate>
     
 	<atom:link href="https://dandaramcsousa.github.io/portoflio-data-visualization/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Histórias de pessoas que passaram no Açude Velho</title>
+      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/third-post/</link>
+      <pubDate>Sat, 09 Dec 2017 09:25:04 -0300</pubDate>
+      
+      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/third-post/</guid>
+      <description>Um dos pontos mais atrativos da cidade de Campina Grande é, sem dúvidas, o Açude Velho. Um ambiente histórico e atemporal quase no centro de uma cidade do interior da Paraíba o Açude Velho tem todos os dias vários cidadãos passando ao seu redor. Sejam pedestres, ciclistas ou motoristas, o volume de pessoas é alto. Em um dia de coleta o LabRua obteve números para os que passam pelo Açude e, também, categorizou os indivíduos por gênero e horário.</description>
+    </item>
     
     <item>
       <title>Histórias de pessoas que passaram no Açude Velho ao longo do dia</title>
@@ -17,7 +26,7 @@
       <pubDate>Mon, 27 Nov 2017 09:25:04 -0300</pubDate>
       
       <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</guid>
-      <description>Açude VelhoDados do Açude Velho.mychart rect {fill: rgb(167, 94, 34);}.mychart rect:hover {fill: rgb(194, 72, 123);}.mychart text {font: 12px sans-serif;text-anchor: left;color: black;}&#34;use strict&#34;function desenhaBarras(dados) {// Preencha aqui.var alturaSVG = 400, larguraSVG = 900;var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do graficolarguraVis = larguraSVG - margin.</description>
+      <description>Açude Velho    Dados do Açude Velho     .mychart rect { fill: rgb(167, 94, 34); } .mychart rect:hover { fill: rgb(194, 72, 123); } .mychart text { font: 12px sans-serif; text-anchor: left; color: black; }  &#34;use strict&#34; function desenhaBarras(dados) { // Preencha aqui. var alturaSVG = 400, larguraSVG = 900; var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do grafico larguraVis = larguraSVG - margin.</description>
     </item>
     
     <item>
