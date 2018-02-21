@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visualização da Informação</title>
-    <link>https://dandaramcsousa.github.io/portoflio-data-visualization/</link>
+    <link>https://dandaramcsousa.github.io/portfolio-data-visualization/</link>
     <description>Recent content on Visualização da Informação</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 21 Feb 2018 13:34:14 -0300</lastBuildDate>
     
-	<atom:link href="https://dandaramcsousa.github.io/portoflio-data-visualization/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dandaramcsousa.github.io/portfolio-data-visualization/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Escolaridade na Paraíba</title>
-      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/fourth-post/</link>
+      <link>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/fourth-post/</link>
       <pubDate>Wed, 21 Feb 2018 13:34:14 -0300</pubDate>
       
-      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/fourth-post/</guid>
+      <guid>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/fourth-post/</guid>
       <description>.cidades {fill: none;stroke: #fff;stroke-linejoin: round;}path:hover, path.highlighted {fill: tomato;}div.tooltip {position: absolute;background-color: white;border: 1px solid black;color: black;font-family:&#34;avenir next&#34;, Arial, sans-serif;padding: 4px 8px;display: none;}var svg = d3.select(&#34;svg&#34;),width = +svg.attr(&#34;width&#34;),height = +svg.attr(&#34;height&#34;);var path = d3.geoPath();// a escala de coresvar color = d3.scaleThreshold().domain([-15,0,15,30,45]).range(d3.schemeSpectral[5]);// função aux definida em legenda-d3-cor.</description>
     </item>
     
     <item>
       <title>Histórias de pessoas que passaram no Açude Velho</title>
-      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/third-post/</link>
+      <link>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/third-post/</link>
       <pubDate>Sat, 09 Dec 2017 09:25:04 -0300</pubDate>
       
-      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/third-post/</guid>
+      <guid>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/third-post/</guid>
       <description>Um dos pontos mais atrativos da cidade de Campina Grande é, sem dúvidas, o Açude Velho. Um ambiente histórico e atemporal quase no centro de uma cidade do interior da Paraíba o Açude Velho tem todos os dias vários cidadãos passando ao seu redor. Sejam pedestres, ciclistas ou motoristas, o volume de pessoas é alto.Em um dia de coleta o LabRua obteve números para os que passam pelo Açude e, também, categorizou os indivíduos por gênero e horário.</description>
     </item>
     
     <item>
       <title>Histórias de pessoas que passaram no Açude Velho ao longo do dia</title>
-      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</link>
+      <link>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/second-post/</link>
       <pubDate>Mon, 27 Nov 2017 09:25:04 -0300</pubDate>
       
-      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</guid>
+      <guid>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/second-post/</guid>
       <description>Açude VelhoDados do Açude Velho.mychart rect {fill: rgb(167, 94, 34);}.mychart rect:hover {fill: rgb(194, 72, 123);}.mychart text {font: 12px sans-serif;text-anchor: left;color: black;}&#34;use strict&#34;function desenhaBarras(dados) {// Preencha aqui.var alturaSVG = 400, larguraSVG = 900;var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do graficolarguraVis = larguraSVG - margin.</description>
     </item>
     
     <item>
       <title>Açude de Boqueirão</title>
-      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/first-post/</link>
+      <link>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/first-post/</link>
       <pubDate>Tue, 14 Nov 2017 09:25:04 -0300</pubDate>
       
-      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/first-post/</guid>
+      <guid>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/first-post/</guid>
       <description>O Açude Epitácio Pessoa, o Boqueirão, é uma represa localizada na cidade de Boqueirão que abastece diversas cidades no estado da Paraíba. O açude chamou atenção afora das cidades abastecidas quando, com a seca, ele atingiu volumes extremos e que levaram à um racionamento que se estendeu de dezembro de 2014 até julho de 2017. Utilizando dados da Agência Nacional de Águas, a ANA, podemos entender um pouco do histórico do açude.</description>
     </item>
     
     <item>
       <title>First Post</title>
-      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/post/first-post/</link>
+      <link>https://dandaramcsousa.github.io/portfolio-data-visualization/post/first-post/</link>
       <pubDate>Tue, 14 Nov 2017 09:18:37 -0300</pubDate>
       
-      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/post/first-post/</guid>
+      <guid>https://dandaramcsousa.github.io/portfolio-data-visualization/post/first-post/</guid>
       <description>const spec = { &#34;$schema&#34;: &#34;https://vega.github.io/schema/vega-lite/v2.json&#34;, &#34;data&#34;: { &#34;url&#34;: &#34;https://api.insa.gov.br/reservatorios/12172/monitoramento&#34;, &#34;format&#34;: { &#34;type&#34;: &#34;json&#34;, &#34;property&#34;: &#34;volumes&#34;, &#34;parse&#34;: { &#34;DataInformacao&#34;: &#34;utc:&#39;%d/%m/%Y&#39;&#34; } } }, &#34;width&#34;: 500, &#34;height&#34;: 120, &#34;mark&#34;: { &#34;type&#34;: &#34;area&#34;, &#34;interpolate&#34;: &#34;monotone&#34; }, &#34;selection&#34;: { &#34;brush&#34;: {&#34;type&#34;: &#34;interval&#34;, &#34;encodings&#34;: [&#34;x&#34;]} }, &#34;encoding&#34;: { &#34;x&#34;: { &#34;timeUnit&#34; : &#34;monthyear&#34;, &#34;field&#34;: &#34;DataInformacao&#34;, &#34;type&#34;: &#34;temporal&#34;, &#34;axis&#34;: {&#34;format&#34;: &#34;%Y&#34;, &#34;title&#34; : &#34;Volume percentual ao longo dos anos&#34;} }, &#34;</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/about/</link>
+      <link>https://dandaramcsousa.github.io/portfolio-data-visualization/about/</link>
       <pubDate>Tue, 14 Nov 2017 09:12:43 -0300</pubDate>
       
-      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/about/</guid>
+      <guid>https://dandaramcsousa.github.io/portfolio-data-visualization/about/</guid>
       <description> Basics Information  Born in 1997 Living in Campina Grande, PB Computer Science student at Federal University of Campina Grande Researcher at Analytics Lab Like to play with data Like to analyze how are women in STEAM  </description>
     </item>
     
