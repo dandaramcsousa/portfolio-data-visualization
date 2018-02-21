@@ -6,10 +6,24 @@
     <description>Recent content on Visualização da Informação</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Dec 2017 09:25:04 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 21 Feb 2018 13:34:14 -0300</lastBuildDate>
     
 	<atom:link href="https://dandaramcsousa.github.io/portoflio-data-visualization/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Escolaridade na Paraíba</title>
+      <link>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/fourth-post/</link>
+      <pubDate>Wed, 21 Feb 2018 13:34:14 -0300</pubDate>
+      
+      <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/fourth-post/</guid>
+      <description>.cidades { fill: none; stroke: #fff; stroke-linejoin: round; }
+path:hover, path.highlighted { fill: tomato; }
+div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&amp;ldquo;avenir next&amp;rdquo;, Arial, sans-serif; padding: 4px 8px; display: none; }
+
+
+     var svg = d3.select(&#34;svg&#34;), width = +svg.attr(&#34;width&#34;), height = +svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold().domain([-15,0,15,30,45]).range(d3.schemeSpectral[5]); // função aux definida em legenda-d3-cor.</description>
+    </item>
     
     <item>
       <title>Histórias de pessoas que passaram no Açude Velho</title>
@@ -17,7 +31,7 @@
       <pubDate>Sat, 09 Dec 2017 09:25:04 -0300</pubDate>
       
       <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/third-post/</guid>
-      <description>Um dos pontos mais atrativos da cidade de Campina Grande é, sem dúvidas, o Açude Velho. Um ambiente histórico e atemporal quase no centro de uma cidade do interior da Paraíba o Açude Velho tem todos os dias vários cidadãos passando ao seu redor. Sejam pedestres, ciclistas ou motoristas, o volume de pessoas é alto. Em um dia de coleta o LabRua obteve números para os que passam pelo Açude e, também, categorizou os indivíduos por gênero e horário.</description>
+      <description>Um dos pontos mais atrativos da cidade de Campina Grande é, sem dúvidas, o Açude Velho. Um ambiente histórico e atemporal quase no centro de uma cidade do interior da Paraíba o Açude Velho tem todos os dias vários cidadãos passando ao seu redor. Sejam pedestres, ciclistas ou motoristas, o volume de pessoas é alto.Em um dia de coleta o LabRua obteve números para os que passam pelo Açude e, também, categorizou os indivíduos por gênero e horário.</description>
     </item>
     
     <item>
@@ -26,7 +40,7 @@
       <pubDate>Mon, 27 Nov 2017 09:25:04 -0300</pubDate>
       
       <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/second-post/</guid>
-      <description>Açude Velho    Dados do Açude Velho     .mychart rect { fill: rgb(167, 94, 34); } .mychart rect:hover { fill: rgb(194, 72, 123); } .mychart text { font: 12px sans-serif; text-anchor: left; color: black; }  &#34;use strict&#34; function desenhaBarras(dados) { // Preencha aqui. var alturaSVG = 400, larguraSVG = 900; var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do grafico larguraVis = larguraSVG - margin.</description>
+      <description>Açude VelhoDados do Açude Velho.mychart rect {fill: rgb(167, 94, 34);}.mychart rect:hover {fill: rgb(194, 72, 123);}.mychart text {font: 12px sans-serif;text-anchor: left;color: black;}&#34;use strict&#34;function desenhaBarras(dados) {// Preencha aqui.var alturaSVG = 400, larguraSVG = 900;var	margin = {top: 10, right: 20, bottom:30, left: 45}, // para descolar a vis das bordas do graficolarguraVis = larguraSVG - margin.</description>
     </item>
     
     <item>
