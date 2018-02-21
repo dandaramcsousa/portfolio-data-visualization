@@ -17,12 +17,7 @@
       <pubDate>Wed, 21 Feb 2018 13:34:14 -0300</pubDate>
       
       <guid>https://dandaramcsousa.github.io/portoflio-data-visualization/blog/fourth-post/</guid>
-      <description>.cidades { fill: none; stroke: #fff; stroke-linejoin: round; }
-path:hover, path.highlighted { fill: tomato; }
-div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&amp;ldquo;avenir next&amp;rdquo;, Arial, sans-serif; padding: 4px 8px; display: none; }
-
-
-     var svg = d3.select(&#34;svg&#34;), width = +svg.attr(&#34;width&#34;), height = +svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold().domain([-15,0,15,30,45]).range(d3.schemeSpectral[5]); // função aux definida em legenda-d3-cor.</description>
+      <description>.cidades {fill: none;stroke: #fff;stroke-linejoin: round;}path:hover, path.highlighted {fill: tomato;}div.tooltip {position: absolute;background-color: white;border: 1px solid black;color: black;font-family:&#34;avenir next&#34;, Arial, sans-serif;padding: 4px 8px;display: none;}var svg = d3.select(&#34;svg&#34;),width = +svg.attr(&#34;width&#34;),height = +svg.attr(&#34;height&#34;);var path = d3.geoPath();// a escala de coresvar color = d3.scaleThreshold().domain([-15,0,15,30,45]).range(d3.schemeSpectral[5]);// função aux definida em legenda-d3-cor.</description>
     </item>
     
     <item>
