@@ -23,13 +23,24 @@
   </url>
   
   <url>
-    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/post/first-post/</loc>
-    <lastmod>2017-11-14T09:18:37-03:00</lastmod>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/about/</loc>
+    <lastmod>2017-11-14T09:12:43-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/about/</loc>
-    <lastmod>2017-11-14T09:12:43-03:00</lastmod>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/fourth-post/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/second-post/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/third-post0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/third-post/</loc>
   </url>
   
   <url>
@@ -44,13 +55,27 @@
   </url>
   
   <url>
-    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/post/</loc>
-    <lastmod>2017-11-14T09:18:37-03:00</lastmod>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/fourth-post/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/second-post/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/third-post0/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dandaramcsousa.github.io/portfolio-data-visualization/third-post/</loc>
     <priority>0</priority>
   </url>
   
