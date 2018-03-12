@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>Estabelecimentos de Ensino Fundamental em áreas remanescentes de Quilombos</title>
+      <title>A ligação no cenário musical brasileiro</title>
       <link>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/sixth-post/</link>
       <pubDate>Mon, 12 Mar 2018 15:26:27 -0300</pubDate>
       
       <guid>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/sixth-post/</guid>
-      <description>D3.node {fill: #ccc;stroke: #fff;stroke-width: 2px;}.link {stroke: #999;stroke-opacity: 0.3;}Force layout1234A preferida do BrasilO quePara esse exemplo, usamos dados de quais artistas são semelhantes a quais da API do Spotify. A partir de um artista inicial, usamos um programa que pega artistas semelhantes a ele, e semelhantes a estes, até atingir um limite.</description>
+      <description>Grafos em D3.node {fill: #ccc;stroke: #fff;stroke-width: 2px;}.link {stroke: #999;stroke-opacity: 0.3;}Para esse exemplo, usamos dados de quais artistas são semelhantes a quais da API do Spotify. A partir de um artista inicial, usamos um programa que pega artistas semelhantes a ele, e semelhantes a estes, até atingir um limite.
+ Por escolha em afinidade, para ilustrar uma banda aqui será usada a majestosa e baiana banda Maglore.</description>
     </item>
     
     <item>
