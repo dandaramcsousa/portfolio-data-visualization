@@ -14,10 +14,10 @@
 <title>
 
 
-     A ligação no cenário musical brasileiro 
+     Os 50 artistas mais ouvidos 
 
 </title>
-<link rel="canonical" href="https://dandaramcsousa.github.io/portfolio-data-visualization/blog/sixth-post/">
+<link rel="canonical" href="https://dandaramcsousa.github.io/portfolio-data-visualization/blog/seventh-post/">
 
 
 
@@ -107,24 +107,24 @@ crossorigin="anonymous"></script>
     </div>
 
     <div class="container  fade-in two ">
-        <h2 class="title is-1 top-pad strong-post-title"><a href="https://dandaramcsousa.github.io/portfolio-data-visualization/blog/sixth-post/">A ligação no cenário musical brasileiro</a></h2>
+        <h2 class="title is-1 top-pad strong-post-title"><a href="https://dandaramcsousa.github.io/portfolio-data-visualization/blog/seventh-post/">Os 50 artistas mais ouvidos</a></h2>
             <div class="post-data">
-                Mar 12, 2018 |
-                2 minutes read
+                Mar 14, 2018 |
+                1 minute read
             </div>
 
             
                 <div class="blog-share">
                 Share this:
                 
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20A%20liga%c3%a7%c3%a3o%20no%20cen%c3%a1rio%20musical%20brasileiro%20https%3a%2f%2fdandaramcsousa.github.io%2fportfolio-data-visualization%2fblog%2fsixth-post%2f"
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Os%2050%20artistas%20mais%20ouvidos%20https%3a%2f%2fdandaramcsousa.github.io%2fportfolio-data-visualization%2fblog%2fseventh-post%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
                 </a>
                 
                  
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdandaramcsousa.github.io%2fportfolio-data-visualization%2fblog%2fsixth-post%2f"
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdandaramcsousa.github.io%2fportfolio-data-visualization%2fblog%2fseventh-post%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -132,7 +132,7 @@ crossorigin="anonymous"></script>
                 
                 
                 
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fdandaramcsousa.github.io%2fportfolio-data-visualization%2fblog%2fsixth-post%2f"
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fdandaramcsousa.github.io%2fportfolio-data-visualization%2fblog%2fseventh-post%2f"
                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 <i class="fa fa-google-plus"></i>
                 <span class="hidden">Google+</span>
@@ -152,7 +152,7 @@ crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<title>Grafos em D3</title>
+	<title>50 artistas mais ouvidos</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -171,9 +171,9 @@ crossorigin="anonymous"></script>
 			}
     </style>
 </head>
-<body>
 
-	<div class="container">
+<body>
+  <div class="container">
 
 		<div id="chart"></div>
 
@@ -192,97 +192,19 @@ crossorigin="anonymous"></script>
 		</div>
 	</div>
 
-	<footer></footer>
 
-	<!-- scripts -->
-	<script src="js/d3.v4.min.js"></script>
-	<script>
-		var
-		    width = 1300,
-		    height = 1300;
+<footer></footer>
 
-		var svg = d3.select("#chart")
-				.append("svg")
-				.attr('version', '1.1')
-				.attr('viewBox', '0 0 '+width+' '+height)
-				.attr('width', '100%');
-
-		var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-		var simulation = d3.forceSimulation()
-		    .force("link", d3.forceLink().id(function(d) { return d.id; }))
-		    .force("charge", d3.forceManyBody().strength(-20))
-		    .force("center", d3.forceCenter(width / 2, height / 2));
-
-		d3.json("maglore.json", function(error, graph) {
-		  if (error) throw error;
-
-			console.dir(graph.edges);
-			console.dir(graph.nodes);
-			grupos = graph.edges.filter(function(d){ return d.id.search("24me6m3bV7l2rnUwaXV0Tj") != -1}).reduce(function(lista,d){lista.push(d.target); lista.push(d.source); return lista}, [])
-			grupos = Array.from(new Set(grupos)); //filtras os grupos
-
-		  var link = svg.append("g")
-		      .attr("class", "link")
-		    .selectAll("line")
-		    	.data(graph.edges.filter(function(d){ return (grupos.includes(d.source) & grupos.includes(d.target))}))
-		    .enter().append("line");
-
-		  var node = svg.append("g")
-		      .attr("class", "nodes")
-		    .selectAll("circle")
-		    	.data(graph.nodes.filter(function(d){ return (grupos.includes(d.id))})) // colocar só as escolhidas
-		    .enter().append("circle")
-		      .attr("r",  function(d) {return (d.size * 0.2) + 3})
-		      .attr("fill", function(d) {if(d.label == "Maglore"){return "#804000"} return "#998cff"; })
-		      .call(d3.drag()
-		          .on("start", dragstarted)
-		          .on("drag", dragged)
-		          .on("end", dragended));
-
-
-
-		  node.append("title")
-		      .text(function(d) { return d.label; });
-
-		  simulation
-		      .nodes(graph.nodes)
-		      .on("tick", ticked);
-
-		  simulation.force("link")
-		      .links(graph.edges);
-
-		  function ticked() {
-		    link
-		        .attr("x1", function(d) { return d.source.x; })
-		        .attr("y1", function(d) { return d.source.y; })
-		        .attr("x2", function(d) { return d.target.x; })
-		        .attr("y2", function(d) { return d.target.y; });
-
-		    node
-		        .attr("cx", function(d) { return d.x; })
-		        .attr("cy", function(d) { return d.y; });
-		  }
-		});
-
-		function dragstarted(d) {
-		  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-		  d.fx = d.x;
-		  d.fy = d.y;
-		}
-
-		function dragged(d) {
-		  d.fx = d3.event.x;
-		  d.fy = d3.event.y;
-		}
-
-		function dragended(d) {
-		  if (!d3.event.active) simulation.alphaTarget(0);
-		  //d.fx = null;
-		  //d.fy = null;
-		}
-
-</script>
+<!-- Scripts -->
+<svg width="1000" height="600"></svg>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+<script src="music_graph.js"></script>
 
 </body>
 </html>
@@ -295,7 +217,7 @@ crossorigin="anonymous"></script>
 
 <div class="container has-text-centered top-pad">
 <hr>
-<a href="https://dandaramcsousa.github.io/portfolio-data-visualization/blog/sixth-post/#top"><i class="fa fa-arrow-up"></i></a>
+<a href="https://dandaramcsousa.github.io/portfolio-data-visualization/blog/seventh-post/#top"><i class="fa fa-arrow-up"></i></a>
 <hr>
 </div>
 
@@ -312,7 +234,7 @@ crossorigin="anonymous"></script>
 
 
 <script>
-$('a[href^="https:\/\/dandaramcsousa.github.io\/portfolio-data-visualization\/blog\/sixth-post\/#"]').click(function(e) {
+$('a[href^="https:\/\/dandaramcsousa.github.io\/portfolio-data-visualization\/blog\/seventh-post\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({

@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Visualização da Informação</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Mar 2018 15:26:27 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 14 Mar 2018 17:52:35 -0300</lastBuildDate>
     
 	<atom:link href="https://dandaramcsousa.github.io/portfolio-data-visualization/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Os 50 artistas mais ouvidos</title>
+      <link>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/seventh-post/</link>
+      <pubDate>Wed, 14 Mar 2018 17:52:35 -0300</pubDate>
+      
+      <guid>https://dandaramcsousa.github.io/portfolio-data-visualization/blog/seventh-post/</guid>
+      <description>50 artistas mais ouvidos  .node { fill: #ccc; stroke: #fff; stroke-width: 2px; } .link { stroke: #999; stroke-opacity: 0.3; }     Para esse exemplo, usamos dados de quais artistas são semelhantes a quais da API do Spotify. A partir de um artista inicial, usamos um programa que pega artistas semelhantes a ele, e semelhantes a estes, até atingir um limite.
+ Por escolha em afinidade, para ilustrar uma banda aqui será usada a majestosa e baiana banda Maglore.</description>
+    </item>
     
     <item>
       <title>A ligação no cenário musical brasileiro</title>
